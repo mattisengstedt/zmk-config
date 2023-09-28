@@ -50,8 +50,8 @@
             bindings = <
                                                                         &trans    &trans    &trans    &kp PAUSE_BREAK    &trans    &kp HOME    &kp UP    &kp PG_UP    &trans    
             &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &kp LEFT    &trans    &kp RIGHT    &trans    
-            &&bt BT_CLR    &&bt BT_SEL 1    &&bt BT_SEL 2    &&bt BT_SEL 3    &&bt BT_SEL 4    &&bt BT_SEL 5    &trans    &trans    &trans    &trans    &trans    &kp END    &kp DOWN    &kp PG_DN    &trans    
-            &&out OUT_TOG    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans 
+            &bt BT_CLR    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 5    &trans    &trans    &trans    &trans    &trans    &kp END    &kp DOWN    &kp PG_DN    &trans    
+            &out OUT_TOG    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans 
             &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     
             &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    
             &trans    &kp MULTIPLY    &trans                                  &trans                                                      &trans    &kp INS    &kp DEL 
