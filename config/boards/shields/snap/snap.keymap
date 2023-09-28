@@ -55,7 +55,7 @@
             &out OUT_TOG    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans 
             &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans     
             &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    &trans    
-            &trans    &kp MULTIPLY    &trans                                  &trans                                                      &trans    &kp INS    &kp DEL 
+            &trans    &kp KP_MULTIPLY    &trans                                  &trans                                                      &trans    &kp INS    &kp DEL 
                     >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
