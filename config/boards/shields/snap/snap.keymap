@@ -62,28 +62,28 @@
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LBKT>, <&LA(LBKT)>, <&LA(LS(LBKT))>;
+            bindings = <&kp LBKT>, <&kp LA(LBKT)>, <&kp LA(LS(LBKT))>;
         };
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_3";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RBKT>, <&LA(RBKT)>, <&LA(LS(RBKT))>;
+            bindings = <&kp RBKT>, <&kp LA(RBKT)>, <&kp LA(LS(RBKT))>;
         };
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_4";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SEMI>, <&LA(SEMI)>, <&LA(LS(SEMI))>;
+            bindings = <&kp SEMI>, <&kp LA(SEMI)>, <&kp LA(LS(SEMI))>;
         };
         td5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_5";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SQT>, <&LA(SQT)>, <&LA(LS(SQT))>;
+            bindings = <&kp SQT>, <&kp LA(SQT)>, <&kp LA(LS(SQT))>;
         };
     };
 
