@@ -48,9 +48,16 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&kp LSHIFT>, <&kp CAPS>;
         };
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LBKT>, <&sk LALT LBKT>, <&sk LALT LSHIFT LBKT>;
+        };
     };
 
-/ {
+{
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder_1>;
