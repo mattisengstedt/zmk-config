@@ -105,7 +105,7 @@
             &kp ESC    AS(N1)        AS(N2)        AS(N3)        AS(N4)        AS(N5)       AS(N6)       AS(N7)     AS(N8)     AS(N9)    AS(N0)    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp BSPC
             &sk TAB    &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y        &kp U      &kp I      &kp O     &kp P     &td2      &td3
             &sk LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G        &kp H        &kp J      &kp K      &kp L     &td4      &td5      &kp ENTER
-            &sk LSHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N        &kp M      AS(COMMA)  AS(DOT)   &kp SLASH &sk RSHIFT
+            &sk LSHIFT &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N        &kp M      AS(COMMA)  AS(DOT)   &kp SLASH &sk RSHIFT
             &sk LALT   &kp PSCRN AS(NUBS)                                                   &lt FUNCTION SPACE                                               &sk CAPS  &kp KP_N0 &kp KP_DOT
                     >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -124,13 +124,13 @@
             // |   Alt    |  PrtScr |    |    |                             |  SPACE  |                                                 |CapsLock |    0    |    .    |
             //
             bindings = <
-                                                                                             &trans           &trans           &trans         &kp PAUSE_BREAK   &trans    &kp HOME &kp UP   &kp PG_UP    &trans    
-            &kp C_BRI_DN &kp C_BRI_UP    &trans       &trans       &kp C_PREV   &kp C_PP     &kp C_NEXT       &kp C_MUTE       &kp C_VOL_DN   &kp C_VOL_UP      &trans    &kp LEFT &trans   &kp RIGHT    &trans    
-            &trans   &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans           &trans           &trans         &trans            &trans    &kp END  &kp DOWN &kp PG_DN    &bt BT_CLR    
-            &out OUT_TOG &trans          &kp UP       &trans       &trans       &trans       &trans           &mkp LCLK        &mmv MOVE_UP   &mkp LCLK         &trans    &trans   &trans 
-            &trans       &kp LEFT        &kp DOWN     &kp RIGHT    &trans       &trans       &trans           &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &trans    &trans   &trans     
-            &trans       &trans          &trans       &trans       &trans       &trans       &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT &trans    &trans    
-            &trans       &kp KP_MULTIPLY &trans                                              &trans                                                             &trans    &kp INS  &kp DEL 
+                                                                                    &trans           &trans           &trans         &kp PAUSE_BREAK   &trans    &kp HOME &kp UP   &kp PG_UP    &trans    
+            &kp C_BRI_DN &kp C_BRI_UP    &trans    &trans     &kp C_PREV &kp C_PP   &kp C_NEXT       &kp C_MUTE       &kp C_VOL_DN   &kp C_VOL_UP      &trans    &kp LEFT &trans   &kp RIGHT    &trans    
+            &trans       &trans          &trans    &trans     &trans     &trans     &trans           &trans           &trans         &trans            &trans    &kp END  &kp DOWN &kp PG_DN    &trans   
+            &trans       &trans          &kp UP    &trans     &trans     &trans     &trans           &mkp LCLK        &mmv MOVE_UP   &mkp LCLK         &trans    &trans   &trans 
+            &trans       &kp LEFT        &kp DOWN  &kp RIGHT  &trans     &trans     &trans           &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &trans    &trans   &trans     
+            &trans       &trans          &trans    &trans     &trans     &trans     &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT &trans    &trans    
+            &trans       &kp KP_MULTIPLY &trans                                     &trans                                                             &trans    &kp INS  &kp DEL 
                     >;
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
