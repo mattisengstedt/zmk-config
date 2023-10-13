@@ -89,7 +89,7 @@
             label = "Reset Tap - Bootloader Hold";
             #binding-cells = <0>;
             tapping_term_ms = <5000>;
-            flavor = "tap_preferred";
+            flavor = "tap-preferred";
             bindings = <&bootloader>, <&sys_reset>;
         };
         btclr: bluetooth_clear_esc {
@@ -97,7 +97,7 @@
             label = "Bluetooth Clear on hold";
             #binding-cells = <0>;
             tapping_term_ms = <5000>;
-            flavor = "tap_preferred";
+            flavor = "tap-preferred";
             bindings = <&bt BT_CLR>, <&kp ESC>;
         };
     };
