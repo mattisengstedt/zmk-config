@@ -10,6 +10,8 @@
 #define DEFAULT 0
 #define FUNCTION 1
 
+#define AS(keycode) &as LS(keycode) keycode
+
 #undef MOVE_UP
 #undef MOVE_DOWN
 #undef MOVE_LEFT
@@ -42,13 +44,13 @@
         sensors = <&encoder_1>;
     };
 
-    behaviors {
+    behaviors { 
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp ESC>, <&kp ESC>, <&bootloader>;
+            bindings = <&kp ESC>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
@@ -85,6 +87,15 @@
             tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp LA(SQT)>, <&kp LA(LS(SQT))>;
         };
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -103,13 +114,13 @@
             // |   Alt    |  PrtScr |    |    |                             |  SPACE  |                                                 |CapsLock |    0    |    .    |
             //
             bindings = <
-                                                                               &mo FUNCTION  &ht_tp LS(GRAVE) GRAVE &kp KP_NUM    &kp SLCK         &ht_tp LS(MINUS) MINUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS
-            &kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &kp F7           &kp F8        &kp F9           &kp F10          &ht_tp LS(EQUAL) EQUAL &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS
-            &kp ESC    &ht_tp LS(N1) N1 &ht_tp LS(N2) N2 &ht_tp LS(N3) N3 &ht_tp LS(N4) N4 &ht_tp LS(N5) N5 &ht_tp LS(N6) N6    &ht_tp LS(N7) N7 &ht_tp LS(N8) N8    &ht_tp LS(N9) N9    &ht_tp LS(N0) N0 &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp BSPC
+                                                                               &mo FUNCTION  AS(GRAVE) &kp KP_NUM    &kp SLCK         AS(MINUS) &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS
+            &kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &kp F7           &kp F8        &kp F9           &kp F10          AS(EQUAL)  &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS
+            &kp ESC    AS(N1) AS(N2)  AS(N3)  AS(N4)  AS(N5)  AS(N6)     AS(N7)  AS(N8)     AS(N9)     AS(N0)  &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp BSPC
             &sk TAB    &kp Q         &kp W         &kp E         &kp R         &kp T         &kp Y            &kp U         &kp I            &kp O            &kp P     &td2      &td3
             &sk LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G         &kp H            &kp J         &kp K            &kp L            &td4      &td5      &kp ENTER
-            &td1       &kp Z         &kp X         &kp C         &kp V         &kp B         &kp N            &kp M         &ht_tp LS(COMMA) COMMA &ht_tp LS(DOT) DOT   &kp SLASH &sk RSHIFT
-            &sk LALT   &kp PSCRN     &ht_tp LS(NUBS) NUBS                           &lt FUNCTION SPACE                                           &sk CAPS          &kp KP_N0 &kp KP_DOT
+            &td1       &kp Z         &kp X         &kp C         &kp V         &kp B         &kp N            &kp M         AS(COMMA)  AS(DOT)    &kp SLASH &sk RSHIFT
+            &sk LALT   &kp PSCRN     AS(NUBS)                            &lt FUNCTION SPACE                                           &sk CAPS          &kp KP_N0 &kp KP_DOT
                     >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
