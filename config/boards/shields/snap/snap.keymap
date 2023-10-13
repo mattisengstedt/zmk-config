@@ -105,7 +105,7 @@
             &kp ESC    AS(N1)        AS(N2)        AS(N3)        AS(N4)        AS(N5)       AS(N6)       AS(N7)     AS(N8)     AS(N9)    AS(N0)    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp BSPC
             &sk TAB    &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y        &kp U      &kp I      &kp O     &kp P     &td2      &td3
             &sk LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G        &kp H        &kp J      &kp K      &kp L     &td4      &td5      &kp ENTER
-            &sk SHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N        &kp M      AS(COMMA)  AS(DOT)   &kp SLASH &sk RSHIFT
+            &sk LSHIFT  &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N        &kp M      AS(COMMA)  AS(DOT)   &kp SLASH &sk RSHIFT
             &sk LALT   &kp PSCRN AS(NUBS)                                                   &lt FUNCTION SPACE                                               &sk CAPS  &kp KP_N0 &kp KP_DOT
                     >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
