@@ -177,7 +177,7 @@
             &trans       &trans          &trans    &trans     &trans     &trans     &trans           &trans           &trans         &trans            &trans           &kp END  &kp DOWN &kp PG_DN    &trans   
             &trans       &trans          &kp UP    &trans     &trans     &trans     &trans           &mkp LCLK        &mmv MOVE_UP   &mkp LCLK         &trans           &trans   &trans 
             &trans       &kp LEFT        &kp DOWN  &kp RIGHT  &trans     &trans     &trans           &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &trans           &trans   &trans     
-            &&caps_word  &trans          &trans    &trans     &trans     &trans     &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT &trans           &trans    
+            &caps_word  &trans          &trans    &trans     &trans     &trans     &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT &trans           &trans    
             &trans       &kp CAPS        &trans                                     &trans                                                             &kp KP_MULTIPLY  &kp INS  &kp DEL 
                     >;
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
