@@ -33,7 +33,13 @@
   time-to-max-speed-ms = <600>;
 };
 
-behaviors {
+/{
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder_1>;
+    };
+
+    behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -55,12 +61,6 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&sk LALT LBKT>, <&sk LALT LSHIFT LBKT>;
         };
-    };
-
-{
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_1>;
     };
 
     keymap {
