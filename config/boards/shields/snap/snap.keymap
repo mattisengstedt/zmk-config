@@ -87,7 +87,7 @@
         rst: boot_reset {
             compatible = "zmk,behavior-hold-tap";
             label = "Reset Tap - Bootloader Hold";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping_term_ms = <5000>;
             flavor = "tap-preferred";
             bindings = <&bootloader>, <&sys_reset>;
@@ -95,7 +95,7 @@
         btclr: bluetooth_clear_esc {
             compatible = "zmk,behavior-hold-tap";
             label = "Bluetooth Clear on hold";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping_term_ms = <5000>;
             flavor = "tap-preferred";
             bindings = <&bt BT_CLR>, <&kp ESC>;
