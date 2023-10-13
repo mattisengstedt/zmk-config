@@ -8,7 +8,7 @@
 #define U_MOUSE_SCROLL_MAX 100
 
 #define DEFAULT 0
-#define FUNCTION   1
+#define FUNCTION 1
 
 #undef MOVE_UP
 #undef MOVE_DOWN
@@ -48,7 +48,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&mo 1>, <&mo 1>, <&mo 1>, <&bootloader>;
+            bindings = <&mo FUNCTION>, <&mo FUNCTION>, <&mo FUNCTION>, <&mo FUNCTION>, <&bootloader>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
@@ -56,13 +56,6 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&sk LSHIFT>, <&kp CAPS>;
-        };
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_2";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LBKT>, <&sk LALT LBKT>, <&sk LALT LSHIFT LBKT>;
         };
     };
 
