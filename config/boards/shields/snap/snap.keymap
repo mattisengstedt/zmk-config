@@ -37,95 +37,6 @@
 };
 
 /{
-    macros {
-        macro_lbkt_1: macro_lbkt_1 {
-            label = "macro_lbkt_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp LBKT>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        macro_lbkt_2: macro_lbkt_2 {
-            label = "macro_lbkt_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp LBKT>
-                , <&macro_release &kp LALT>
-                , <&macro_release &kp LSHIFT>
-                ;
-        macro_rbkt_1: macro_rbkt_1 {
-            label = "macro_rbkt_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp RBKT>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        macro_rbkt_2: macro_rbkt_2 {
-            label = "macro_rbkt_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp RBKT>
-                , <&macro_release &kp LALT>
-                , <&macro_release &kp LSHIFT>
-                ;
-        macro_semi_1: macro_semi_1 {
-            label = "macro_semi_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp SEMI>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        macro_semi_2: macro_semi_2 {
-            label = "macro_semi_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp SEMI>
-                , <&macro_release &kp LALT>
-                , <&macro_release &kp LSHIFT>
-                ;
-        };
-        macro_sqt_1: macro_sqt_1 {
-            label = "macro_sqt_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp SQT>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        macro_sqt_2: macro_sqt_2 {
-            label = "macro_sqt_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp SQT>
-                , <&macro_release &kp LALT>
-                , <&macro_release &kp LSHIFT>
-                ;
-        };
-    };
-
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder_1>;
@@ -151,28 +62,28 @@
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LBKT>, <&macro_lbkt_1>, <&macro_lbkt_2>;
+            bindings = <&kp LBKT>, <&LA(LBKT)>, <&LA(LS(LBKT))>;
         };
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_3";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RBKT>, <&macro_rbkt_1>, <&macro_rbkt_2>;
+            bindings = <&kp RBKT>, <&LA(RBKT)>, <&LA(LS(RBKT))>;
         };
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_4";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SEMI>, <&macro_semi_1>, <&macro_semi_2>;
+            bindings = <&kp SEMI>, <&LA(SEMI)>, <&LA(LS(SEMI))>;
         };
         td5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_5";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp SQT>, <&macro_sqt_1>, <&macro_sqt_2>;
+            bindings = <&kp SQT>, <&LA(SQT)>, <&LA(LS(SQT))>;
         };
     };
 
