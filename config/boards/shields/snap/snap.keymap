@@ -86,6 +86,17 @@
         };
     };
 
+    macros {
+        set_default: set_default {
+            label = "set_default";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tao &kp LSHFT &kp LSHIFT>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
