@@ -12,7 +12,6 @@
 #define FUNCTION 2
 #define SETTINGS_LAYER 3
 
-
 #define AS(keycode) &as LS(keycode) keycode
 
 #undef MOVE_UP
@@ -175,13 +174,13 @@
             // |   Alt    |  PrtScr |    |    |                             |  SPACE  |                                                 |CapsLock |    0    |    .    |
             //
             bindings = <
-                                                                                    &trans           &trans           &trans         &kp PAUSE_BREAK   &trans    &kp HOME &kp UP   &kp PG_UP    &trans    
-            &kp C_BRI_DN &kp C_BRI_UP    &trans    &trans     &kp C_PREV &kp C_PP   &kp C_NEXT       &kp C_MUTE       &kp C_VOL_DN   &kp C_VOL_UP      &trans    &kp LEFT &trans   &kp RIGHT    &trans    
-            &trans       &trans          &trans    &trans     &trans     &trans     &trans           &trans           &trans         &trans            &trans    &kp END  &kp DOWN &kp PG_DN    &trans   
-            &trans       &trans          &kp UP    &trans     &trans     &trans     &trans           &mkp LCLK        &mmv MOVE_UP   &mkp LCLK         &trans    &trans   &trans 
-            &trans       &kp LEFT        &kp DOWN  &kp RIGHT  &trans     &trans     &trans           &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &trans    &trans   &trans     
-            &trans       &trans          &trans    &trans     &trans     &trans     &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT &trans    &trans    
-            &trans       &kp KP_MULTIPLY &trans                                     &trans                                                             &trans    &kp INS  &kp DEL 
+                                                                              &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans  
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans    
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans    
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans 
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans    
+            &trans     &trans     &trans                                      &trans                                                            &trans     &trans     &trans
                     >;
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
