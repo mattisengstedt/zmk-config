@@ -9,7 +9,6 @@
 
 #define DEFAULT 0
 #define FUNCTION 1
-#define BOOTLOADER 2
 
 #undef MOVE_UP
 #undef MOVE_DOWN
@@ -104,13 +103,13 @@
             // |   Alt    |  PrtScr |    |    |                             |  SPACE  |                                                 |CapsLock |    0    |    .    |
             //
             bindings = <
-                                                                               &mo FUNCTION  &ht_tp LSHIFT GRAVE &kp KP_NUM    &kp SLCK         &ht_tp LSHIFT MINUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS
-            &kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &kp F7           &kp F8        &kp F9           &kp F10          &ht_tp LSHIFT EQUAL &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS
-            &kp ESC    &ht_tp LSHIFT N1 &ht_tp LSHIFT N2 &ht_tp LSHIFT N3 &ht_tp LSHIFT N4 &ht_tp LSHIFT N5 &ht_tp LSHIFT N6    &ht_tp LSHIFT N7 &ht_tp LSHIFT N8    &ht_tp LSHIFT N9    &ht_tp LSHIFT N0 &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp BSPC
+                                                                               &mo FUNCTION  &ht_tp LS(GRAVE) GRAVE &kp KP_NUM    &kp SLCK         &ht_tp LS(MINUS) MINUS &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS
+            &kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &kp F7           &kp F8        &kp F9           &kp F10          &ht_tp LS(EQUAL) EQUAL &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS
+            &kp ESC    &ht_tp LS(N1) N1 &ht_tp LS(N2) N2 &ht_tp LS(N3) N3 &ht_tp LS(N4) N4 &ht_tp LS(N5) N5 &ht_tp LS(N6) N6    &ht_tp LS(N7) N7 &ht_tp LS(N8) N8    &ht_tp LS(N9) N9    &ht_tp LS(N0) N0 &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp BSPC
             &sk TAB    &kp Q         &kp W         &kp E         &kp R         &kp T         &kp Y            &kp U         &kp I            &kp O            &kp P     &td2      &td3
             &sk LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G         &kp H            &kp J         &kp K            &kp L            &td4      &td5      &kp ENTER
-            &td1       &kp Z         &kp X         &kp C         &kp V         &kp B         &kp N            &kp M         &ht_tp LSHIFT COMMA &ht_tp LSHIFT DOT   &kp SLASH &sk RSHIFT
-            &sk LALT   &kp PSCRN     &ht_tp LSHIFT NUBS                           &lt FUNCTION SPACE                                           &sk CAPS          &kp KP_N0 &kp KP_DOT
+            &td1       &kp Z         &kp X         &kp C         &kp V         &kp B         &kp N            &kp M         &ht_tp LS(COMMA) COMMA &ht_tp LS(DOT) DOT   &kp SLASH &sk RSHIFT
+            &sk LALT   &kp PSCRN     &ht_tp LS(NUBS) NUBS                           &lt FUNCTION SPACE                                           &sk CAPS          &kp KP_N0 &kp KP_DOT
                     >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -128,7 +127,7 @@
             // |   Alt    |  PrtScr |    |    |                             |  SPACE  |                                                 |CapsLock |    0    |    .    |
             //
             bindings = <
-                                                                                             &trans           &mo BOOTLOADER           &trans         &kp PAUSE_BREAK   &trans    &kp HOME &kp UP   &kp PG_UP    &trans    
+                                                                                             &trans           &mo 2           &trans         &kp PAUSE_BREAK   &trans    &kp HOME &kp UP   &kp PG_UP    &trans    
             &kp C_BRI_DN &kp C_BRI_UP    &trans       &trans       &kp C_PREV   &kp C_PP     &kp C_NEXT       &kp C_MUTE       &kp C_VOL_DN   &kp C_VOL_UP      &trans    &kp LEFT &trans   &kp RIGHT    &trans    
             &trans   &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans           &trans           &trans         &trans            &trans    &kp END  &kp DOWN &kp PG_DN    &bt BT_CLR    
             &out OUT_TOG &trans          &kp UP       &trans       &trans       &trans       &trans           &mkp LCLK        &mmv MOVE_UP   &mkp LCLK         &trans    &trans   &trans 
@@ -137,6 +136,8 @@
             &trans       &kp KP_MULTIPLY &trans                                              &trans                                                             &trans    &kp INS  &kp DEL 
                     >;
 
+            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
+        };
         bootloader_layer {
             label = "Bootloader";
 
