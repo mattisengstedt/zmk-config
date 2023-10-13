@@ -92,7 +92,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tao &kp LSHFT &kp LSHIFT>
+                = <&macro_tap &kp LSHFT &kp LSHIFT>
                 ;
         };
     };
