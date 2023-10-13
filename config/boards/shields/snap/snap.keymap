@@ -92,7 +92,15 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LSHFT &kp LSHIFT>
+                = <&macro_tap &tog DEFAULT &out OUT_USB>
+                ;
+        };
+        set_default: set_default {
+            label = "set_default";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &tog MAC_LAYER &bt BT_SEL 0>
                 ;
         };
     };
