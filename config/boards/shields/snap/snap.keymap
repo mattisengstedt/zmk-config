@@ -95,7 +95,7 @@
         btclr: bluetooth_clear_esc {
             compatible = "zmk,behavior-hold-tap";
             label = "Bluetooth Clear on hold";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping_term_ms = <5000>;
             flavor = "tap-preferred";
             bindings = <&bt BT_CLR>, <&kp ESC>;
