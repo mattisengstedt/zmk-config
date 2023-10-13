@@ -88,19 +88,19 @@
         {
             compatible = "zmk,behavior-hold-tap";
             label = "Reset Tap - Bootloader Hold";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping_term_ms = <5000>;
-            flavor = "balanced";
+            flavor = "tap_preferred";
             bindings = <&bootloader>, <&sys_reset>;
         };
         btclr: blt_clear
         {
             compatible = "zmk,behavior-hold-tap";
             label = "Bluetooth Clear on hold";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             tapping_term_ms = <5000>;
-            flavor = "balanced";
-            bindings = <&bt BT_CLR>, <&trans>;
+            flavor = "tap_preferred";
+            bindings = <&bt BT_CLR>, <&kp ESC>;
         };
     };
 
