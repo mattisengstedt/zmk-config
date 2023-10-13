@@ -37,6 +37,31 @@
 };
 
 /{
+    macros {
+        macro_lbkt_1: macro_lbkt_1 {
+            label = "macro_lbkt_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp LBKT>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        macro_lbkt_2: macro_lbkt_2 {
+            label = "macro_lbkt_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp LBKT>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LSHIFT>
+                ;
+        };
+    };
+
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder_1>;
@@ -56,6 +81,13 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&sk LSHIFT>, <&kp CAPS>;
+        };
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LBKT>, <&macro_lbkt_1>, <&macro_lbkt_2>;
         };
     };
 
