@@ -92,6 +92,14 @@
             flavor = "tap-preferred";
             bindings = <&bootloader>, <&sys_reset>;
         };
+        bt_clr_esc: bt_clr_esc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Esc Tap - Bluetooth Clear Hold";
+            #binding-cells = <2>;
+            tapping_term_ms = <5000>;
+            flavor = "tap-preferred";
+            bindings = <&bt_clr_macro>, <&kp ESC>;
+        };
     };
 
     macros {
@@ -124,6 +132,14 @@
                 , <&macro_tap &kp N5>
                 , <&macro_release &kp LMETA>
                 , <&macro_release &kp LSHFT>
+                ;
+        };
+        bt_clr_macro: bt_clr_macro {
+            label = "Clear bluetooth macro";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&bt BT_CLR>
                 ;
         };
     };
@@ -218,7 +234,7 @@
             bindings = <
                                                                                            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans  
             &set_default  &set_mac     &trans       &trans       &trans       &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans    
-            &trans        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &rst 0 0    
+            &bt_clr_esc 0 0        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &rst 0 0    
             &out OUT_TOG  &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans 
             &trans        &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans     &trans     &trans     &trans     &trans     
             &trans        &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans     &trans     &trans     &trans    
