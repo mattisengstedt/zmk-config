@@ -41,10 +41,6 @@
   time-to-max-speed-ms = <600>;
 };
 
-&lt {
-            tapping-term-ms = <180>;
-        };
-
 /{
     sensors {
         compatible = "zmk,keymap-sensors";
