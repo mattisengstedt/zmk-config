@@ -41,6 +41,10 @@
   time-to-max-speed-ms = <600>;
 };
 
+&lt {
+            tapping-term-ms = <135>;
+        };
+
 /{
     sensors {
         compatible = "zmk,keymap-sensors";
@@ -48,9 +52,7 @@
     };
 
     behaviors {
-        &lt {
-            tapping-term-ms = <135>;
-        };
+        
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
