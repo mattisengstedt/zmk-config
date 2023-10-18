@@ -42,7 +42,7 @@
 };
 
 &lt {
-            tapping-term-ms = <135>;
+            tapping-term-ms = <180>;
         };
 
 /{
