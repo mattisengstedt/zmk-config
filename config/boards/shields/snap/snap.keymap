@@ -53,28 +53,28 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&kp LA(LBKT)>, <&kp LA(LS(LBKT))>;
         };
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_3";
             #binding-cells = <0>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <200>;
             bindings = <&kp RBKT>, <&kp LA(RBKT)>, <&kp LA(LS(RBKT))>;
         };
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_4";
             #binding-cells = <0>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <200>;
             bindings = <&mt LMETA SEMI>, <&kp LA(SEMI)>, <&kp LA(LS(SEMI))>;
         };
         td5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_5";
             #binding-cells = <0>;
-            tapping-term-ms = <135>;
+            tapping-term-ms = <200>;
             bindings = <&kp SQT>, <&kp LA(SQT)>, <&kp LA(LS(SQT))>;
         };
         as: auto_shift {
