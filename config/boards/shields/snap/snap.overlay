@@ -9,8 +9,8 @@
     encoder_1: encoder_1 {
         compatible = "alps,ec11";
         label = "Encoder 1";
-        a-gpios = <&gpio1 07 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        b-gpios = <&gpio1 02 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        a-gpios = <&gpio1 07 GPIO_ACTIVE_HIGH>;
+        b-gpios = <&gpio1 02 GPIO_ACTIVE_HIGH>;
         resolution = <4>;
         status = "okay";
     };
