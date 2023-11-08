@@ -178,7 +178,7 @@
             &kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y              &kp U      &kp I      &kp O     &kp P     &kp LBKT  &kp RBKT
             &sk LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G        &kp H              &kp J      &kp K      &kp L     &kp SEMI  &kp SQT   &kp ENTER
             &sk LSHIFT &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N              &kp M      AS(COMMA)  AS(DOT)   AS(SLASH) &sk RSHIFT
-            &sk LALT   &kp CAPS      AS(NUBS)                                               &lt FUNCTION SPACE                                                     &sk PSCRN &kp KP_N0 &kp KP_DOT
+            &sk CAPS   &sk LALT      AS(BSLH)                                               &lt FUNCTION SPACE                                                     &sk PSCRN &kp KP_N0 &kp KP_DOT
                     >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -202,7 +202,7 @@
             &kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y              &kp U        &kp I       &kp O      &kp P     &kp LBKT  &kp RBKT
             &sk LMETA  &kp A         &kp S         &kp D         &kp F         &kp G        &kp H              &kp J        &kp K       &kp L      &kp SEMI  &kp SQT   &kp ENTER
             &sk LSHIFT &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N              &kp M        AS(COMMA)   AS(DOT)    AS(SLASH) &sk RSHIFT
-            &sk LALT   &sk LCTRL     AS(NUBS)                                               &lt FUNCTION SPACE                                                     &mac_pscrn &kp KP_N0 &kp KP_DOT
+            &sk LCTRL   &sk LALT     AS(BSLH)                                               &lt FUNCTION SPACE                                                     &mac_pscrn &kp KP_N0 &kp KP_DOT
                     >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -226,7 +226,7 @@
             &kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y              &kp U      &kp I      &kp O     &kp P     &kp LBKT  &kp RBKT
             &sk LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G        &kp H              &kp J      &kp K      &kp L     &kp SEMI  &kp SQT   &kp ENTER
             &sk LSHIFT &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N              &kp M      AS(COMMA)  AS(DOT)   AS(SLASH) &sk RSHIFT
-            &sk LALT   &kp LMETA     AS(NUBS)                                               &lt FUNCTION SPACE                                                     &sk PSCRN &kp KP_N0 &kp KP_DOT
+            &sk LMETA  &kp LALT     AS(BSLH)                                               &lt FUNCTION SPACE                                                     &sk PSCRN &kp KP_N0 &kp KP_DOT
                     >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -250,7 +250,7 @@
             &trans       &trans          &kp UP    &trans     &trans     &trans     &trans           &mkp LCLK        &mmv MOVE_UP   &mkp LCLK         &trans           &td2     &td3 
             &trans       &kp LEFT        &kp DOWN  &kp RIGHT  &trans     &trans     &trans           &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &td4             &td5     &trans     
             &caps_word   &trans          &trans    &trans     &trans     &trans     &mwh SCROLL_LEFT &mwh SCROLL_DOWN &mwh SCROLL_UP &mwh SCROLL_RIGHT &trans           &trans    
-            &trans       &kp CAPS        &trans                                     &trans                                                             &kp KP_MULTIPLY  &kp INS  &kp DEL 
+            &kp CAPS     &trans        &trans                                     &trans                                                             &kp KP_MULTIPLY  &kp INS  &kp DEL 
                     >;
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
