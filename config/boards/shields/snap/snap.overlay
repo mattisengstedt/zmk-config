@@ -11,7 +11,7 @@
         label = "Encoder 1";
         a-gpios = <&gpio1 07 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 02 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <36>;
+        steps = <48>;
         status = "okay";
     };
 
