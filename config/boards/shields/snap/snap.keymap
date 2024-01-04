@@ -13,6 +13,7 @@
 #define FUNCTION 3
 #define SETTINGS_LAYER 4
 #define NUM_LAYER 5
+#define GAME_LAYER 6
 
 #undef MOVE_UP
 #undef MOVE_DOWN
