@@ -9,11 +9,10 @@
 
 #define DEFAULT 0
 #define MAC_LAYER 1
-#define ANDROID_LAYER 2
-#define FUNCTION 3
-#define SETTINGS_LAYER 4
-#define NUM_LAYER 5
-#define GAME_LAYER 6
+#define FUNCTION 2
+#define SETTINGS_LAYER 3
+#define NUM_LAYER 4
+#define GAME_LAYER 5
 
 #undef MOVE_UP
 #undef MOVE_DOWN
@@ -103,7 +102,8 @@
             #binding-cells = <0>;
             bindings
                 = <&to DEFAULT>
-                , <&out OUT_USB>
+                , <&out OUT_BLE>
+                , <&bt BT_SEL 0>
                 ;
         };
         set_mac: set_mac {
@@ -113,7 +113,7 @@
             bindings
                 = <&to MAC_LAYER>
                 , <&out OUT_BLE>
-                , <&bt BT_SEL 0>
+                , <&bt BT_SEL 1>
                 ;
         };
         set_android: set_android {
@@ -164,13 +164,13 @@
             // |   Alt    |  PrtScr |    |    |                             |  SPACE  |                                                 |CapsLock |    0    |    .    |
             //
             bindings = <
-                                                                                            &mo SETTINGS_LAYER &kp GRAVE  &kp LNLCK    &kp SLCK  &kp MINUS  &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS
-            &kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6       &kp F7             &kp F8     &kp F9       &kp F10   &kp EQUAL  &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS
-            &kp ESC    &kp N1        &kp N2        &kp N3        &kp N4        &kp N5       &kp N6             &kp N7     &kp N8       &kp N9    &kp N0     &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp BSPC
-            &kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y              &kp U      &kp I        &kp O     &kp P      &kp LBKT  &kp RBKT
-            &kp LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G        &kp H              &kp J      &kp K        &kp L     &kp SEMI   &kp SQT   &kp ENTER
-            &kp LSHIFT &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N              &kp M      &kp COMMA    &kp DOT   &kp SLASH  &kp RSHIFT
-            &kp CAPS   &kp LALT      &kp BSLH                                               &lt FUNCTION SPACE                                                        &kp PSCRN &kp KP_N0 &kp KP_DOT
+                                                                                            &mo FUNCTION       &kp GRAVE  &tog NUM_LAYER &kp SLCK  &kp MINUS  &kp HOME  &kp UP    &kp PG_UP &kp KP_MINUS
+            &kp F1     &kp F2        &kp F3        &kp F4        &kp F5        &kp F6       &kp F7             &kp F8     &kp F9         &kp F10   &kp EQUAL  &kp LEFT  &kp DOWN  &kp RIGHT &kp KP_PLUS
+            &kp ESC    &kp N1        &kp N2        &kp N3        &kp N4        &kp N5       &kp N6             &kp N7     &kp N8         &kp N9    &kp N0     &kp END   &kp DOWN  &kp PG_DN &kp BSPC
+            &kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T        &kp Y              &kp U      &kp I          &kp O     &kp P      &td2      &td3 
+            &kp LCTRL  &kp A         &kp S         &kp D         &kp F         &kp G        &kp H              &kp J      &kp K          &kp L     &td4       &td5      &kp ENTER
+            &kp LSHIFT &kp Z         &kp X         &kp C         &kp V         &kp B        &kp N              &kp M      &kp COMMA      &kp DOT   &kp SLASH  &kp RSHIFT
+            &kp LMETA  &kp LALT      &kp BSLH                                               &kp SPACE                                                         &kp PSCRN &kp KP_N0 &kp KP_DOT
                     >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -188,37 +188,13 @@
             // |   Alt    | CapsLck |    |    |                             |  SPACE  |                                                 | PrnScrn |    0    |    .    |
             //
             bindings = <
-                                                                                          &trans     &trans     &tog NUM_LAYER &trans  &trans     &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS
-            &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS
-            &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &kp MINUS &kp EQUAL &kp BSLH  &trans
+                                                                                          &trans     &trans     &trans         &trans  &trans     &trans  &trans     &trans    &trans 
+            &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &trans  &trans     &trans    &trans 
+            &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &trans  &trans     &trans    &trans 
             &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &trans    &trans 
             &kp LMETA    &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &trans    &trans     
             &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &trans   
             &kp LCTRL    &trans       &trans                                              &trans                                                  &mac_pscrn  &trans  &trans
-                    >;
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-        };
-
-        android_layer {
-            label = "Android TV Layer";
-
-            // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            //                                                              |    FN   |    `    |   NMLK  |   SCLK  |    -    |    7    |    8    |    9    |    -    |
-            // |   F1     |    F2   |    F3   |    F4   |    F5   |    F6   |    F7   |    F8   |    F9   |   F10   |    +    |    1    |    2    |    3    |    +    |
-            // |   ESC    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |    9    |    0    |    1    |    2    |    3    |   BSPC  |
-            // |   TAB    |    Q    |    W    |    E    |    R    |    T    |    Y    |    U    |    I    |    O    |    P    |    [    |    ]    |
-            // |   CTRL   |    A    |    S    |    D    |    F    |    G    |    H    |    J    |    K    |    L    |    ;    |    '    |  ENTER  |
-            // |   SHIFT  |    Z    |    X    |    C    |    V    |    B    |    N    |    M    |    ,    |    .    |    /    |  SHIFT  |
-            // |   Alt    |  PrtScr |    |    |                             |  SPACE  |                                                 |CapsLock |    0    |    .    |
-            //
-            bindings = <
-                                                                                          &trans     &trans     &tog NUM_LAYER &trans  &trans     &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS
-            &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS
-            &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &kp KP_N1 &kp KP_N2 &kp KP_N3 &trans
-            &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &trans    &trans 
-            &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &trans    &trans     
-            &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans     &trans         &trans  &trans     &trans    
-            &trans       &trans       &trans                                              &trans                                                            &trans    &trans    &trans
                     >;
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
@@ -236,11 +212,11 @@
             // |   Alt    | CapsLck |    |    |                             |  SPACE  |                                                 | PrtScr  |    0    |    .    |
             //
             bindings = <
-                                                                                   &trans            &trans            &trans          &kp PAUSE_BREAK    &trans           &kp HOME  &kp UP    &kp PG_UP  &trans    
-            &kp C_BRI_DN  &kp C_BRI_UP  &trans    &trans     &kp C_PREV  &kp C_PP  &kp C_NEXT        &kp C_MUTE        &kp C_VOL_DN    &kp C_VOL_UP       &trans           &kp LEFT  &trans    &kp RIGHT  &trans    
-            &trans        &trans        &trans    &trans     &trans      &trans    &trans            &trans            &trans          &trans             &trans           &kp END   &kp DOWN  &kp PG_DN  &trans   
-            &trans        &kp HOME      &kp UP    &kp END    &trans      &trans     &trans           &mkp LCLK         &mmv MOVE_UP    &mkp LCLK          &trans           &td2      &td3 
-            &trans        &kp LEFT      &kp DOWN  &kp RIGHT  &trans      &trans    &trans            &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &td4             &td5      &trans     
+                                                                                   &trans            &trans            &trans          &kp PAUSE_BREAK    &trans           &trans  &trans     &trans    &trans  
+            &kp C_BRI_DN  &kp C_BRI_UP  &trans    &trans     &kp C_PREV  &kp C_PP  &kp C_NEXT        &kp C_MUTE        &kp C_VOL_DN    &kp C_VOL_UP       &trans           &trans  &trans     &trans    &trans    
+            &bt_clr_esc 0 &set_default  &set_mac  &trans     &trans      &trans    &trans            &trans            &trans          &trans             &trans           &trans  &trans     &trans    &rst 0 0  
+            &OUT_TOG      &kp HOME      &kp UP    &kp END    &trans      &trans    &trans            &mkp LCLK         &mmv MOVE_UP    &mkp LCLK          &trans           &trans  &trans  
+            &trans        &kp LEFT      &kp DOWN  &kp RIGHT  &trans      &trans    &trans            &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_RIGHT    &trans           &trans       &trans     
             &caps_word    &trans        &trans    &trans     &trans      &trans    &mwh SCROLL_LEFT  &mwh SCROLL_DOWN  &mwh SCROLL_UP  &mwh SCROLL_RIGHT  &trans           &trans    
             &kp CAPS      &trans        &trans                                     &trans                                                                 &kp KP_MULTIPLY  &kp INS  &kp DEL 
                     >;
@@ -284,9 +260,9 @@
             // |   Alt    |  PrtScr |    |    |                             |  SPACE  |                                                 |CapsLock |    0    |    .    |
             //
             bindings = <
-                                                                  &trans   &trans   &tog NUM_LAYER &trans   &trans   &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
-            &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
-            &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &kp KP_N1  &kp KP_N2  &kp KP_N3  &trans
+                                                                  &trans   &trans   &tog NUM_LAYER &trans   &trans   &kp N7     &kp N8     &kp N9     &trans
+            &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &kp N4     &kp N5     &kp N6     &trans
+            &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &kp N1     &kp N2     &kp N3     &trans
             &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &trans     &trans 
             &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &trans     &trans     
             &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &trans    
@@ -308,9 +284,9 @@
             // |   Alt    |  PrtScr |    |    |                             |  SPACE  |                                                 |CapsLock |    0    |    .    |
             //
             bindings = <
-                                                                  &trans   &trans   &trans         &trans   &trans   &kp HOME  &kp UP    &kp PG_UP  &trans 
-            &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &kp LEFT  &kp DOWN    &kp RIGHT  &trans 
-            &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &kp END   &kp DOWN  &kp PG_DN  &trans  
+                                                                  &trans   &trans   &trans         &trans   &trans   &kp HOME   &kp UP    &kp PG_UP  &trans 
+            &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &kp LEFT   &kp DOWN  &kp RIGHT  &trans 
+            &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &kp END    &kp DOWN  &kp PG_DN  &trans  
             &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &trans     &trans 
             &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &trans     &trans     
             &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &trans    
