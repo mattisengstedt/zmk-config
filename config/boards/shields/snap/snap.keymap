@@ -116,16 +116,6 @@
                 , <&bt BT_SEL 1>
                 ;
         };
-        set_android: set_android {
-            label = "Set Android TV layer";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to ANDROID_LAYER>
-                , <&out OUT_BLE>
-                , <&bt BT_SEL 1>
-                ;
-        };
         mac_pscrn: mac_pscrn {
             label = "mac_pscrn";
             compatible = "zmk,behavior-macro";
