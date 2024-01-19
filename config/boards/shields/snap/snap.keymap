@@ -179,7 +179,7 @@
             &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans         &trans  &trans     &trans      &trans     &trans    &trans 
             &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans         &trans  &trans     &trans      &trans     &trans    &trans 
             &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans         &trans  &trans     &trans      &trans 
-            &kp LMETA    &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans         &trans  &td4       &td5        &trans
+            &kp LMETA    &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans         &trans  &trans     &trans        &trans
             &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans     &trans         &trans  &trans     &trans   
             &kp LCTRL    &trans       &trans                                              &trans                                                    &mac_pscrn  &trans  &trans
                     >;
